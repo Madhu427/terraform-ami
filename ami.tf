@@ -1,4 +1,4 @@
-resource "aws_ami_from_instance" "ami"
+resource "aws_ami_from_instance" "ami" {
 ####depends on is used for creation of ami only after installation of instance
   depends_on = [null_resource.app_deploy]
   name               = "${var.COMPONENT}-${var.APP_VERSION}"
